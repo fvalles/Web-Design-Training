@@ -1,22 +1,32 @@
 $font: 'Roboto', sans-serif;
 $span-color: #A1A1A1;
 
+.page-content {
+  display: flex;
+}
+
+.book-cover {
+  margin: 20px 40px 20px 20px;
+  max-width: 230px;
+  width: 100%;
+}
+
 .text-style {
-  font-family: $font;
   display: flex;
   flex-direction: column;
+  font-family: $font;
 }
 
 .title {
   font-size: 28px;
   font-weight: bold;
-  margin: 5px 0 45px 10px;
+  margin: 20px 0 45px 10px;
 }
 
 .title-span {
+  color: $span-color;
   font-size: 20px;
   font-weight: bold;
-  color: $span-color;
 }
 
 .subtitle {
@@ -26,6 +36,6 @@ $span-color: #A1A1A1;
 }
 
 .subtitle-span {
-  font-size: 18px;
   color: $span-color;
+  font-size: 18px;
 }
