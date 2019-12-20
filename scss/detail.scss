@@ -1,0 +1,31 @@
+$font: 'Roboto', sans-serif;
+$span-color: #A1A1A1;
+
+.text-style {
+  font-family: $font;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 5px 0 45px 10px;
+}
+
+.title-span {
+  font-size: 20px;
+  font-weight: bold;
+  color: $span-color;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 25px 10px;
+}
+
+.subtitle-span {
+  font-size: 18px;
+  color: $span-color;
+}
