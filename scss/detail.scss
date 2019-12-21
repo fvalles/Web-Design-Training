@@ -1,12 +1,38 @@
 $font: 'Roboto', sans-serif;
 $silver-chalice: #A1A1A1;
 $tundora: #474747;
-$key-lime-pipe: #B0BF1A;
+//$key-lime-pipe: #B0BF1A;
+$viking: #63C8D4;
+
+html {
+  height: 100%;
+}
+
+.centered-body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
 
 .page-content {
   box-shadow: 1px 1px 7px $tundora;
   display: flex;
+  height: 400px;
+  position: relative;
   width: 900px;
+}
+
+.page-content-book-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-item {
+  box-shadow: 1px 1px 7px $tundora;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 20px 20px;
 }
 
 .badge {
@@ -26,6 +52,12 @@ $key-lime-pipe: #B0BF1A;
   width: 100%;
 }
 
+.book-cover-item {
+  margin: 20px 20px 5px 20px;
+  max-width: 150px;
+  //width: 100%;
+}
+
 .text-style {
   display: flex;
   flex-direction: column;
@@ -34,12 +66,24 @@ $key-lime-pipe: #B0BF1A;
   margin-right: 20px;
 }
 
+.text-style-book-item {
+  display: flex;
+  flex-direction: column;
+  font-family: $font;
+}
+
 .title {
-  border-bottom: 4px solid $key-lime-pipe;
+  border-bottom: 4px solid $viking;
   font-size: 28px;
   font-weight: bold;
   margin: 20px 0 35px 10px;
   padding-bottom: 10px;;
+}
+
+.title-book-item {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 5px 0 5px 20px;
 }
 
 .title-span {
@@ -52,6 +96,13 @@ $key-lime-pipe: #B0BF1A;
   font-size: 18px;
   font-weight: bold;
   margin: 5px 0 25px 10px;
+}
+
+.subtitle-book-item {
+  color: $silver-chalice;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 5px 0 10px 20px;
 }
 
 .subtitle-span {
