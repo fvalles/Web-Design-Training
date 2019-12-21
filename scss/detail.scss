@@ -1,8 +1,12 @@
 $font: 'Roboto', sans-serif;
-$span-color: #A1A1A1;
+$silver-chalice: #A1A1A1;
+$tundora: #474747;
+$key-lime-pipe: #B0BF1A;
 
 .page-content {
+  box-shadow: 1px 1px 7px $tundora;
   display: flex;
+  width: 900px;
 }
 
 .book-cover {
@@ -14,17 +18,21 @@ $span-color: #A1A1A1;
 .text-style {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   font-family: $font;
+  margin-right: 20px;
 }
 
 .title {
+  border-bottom: 4px solid $key-lime-pipe;
   font-size: 28px;
   font-weight: bold;
-  margin: 20px 0 45px 10px;
+  margin: 20px 0 35px 10px;
+  padding-bottom: 10px;;
 }
 
 .title-span {
-  color: $span-color;
+  color: $silver-chalice;
   font-size: 20px;
   font-weight: bold;
 }
@@ -36,6 +44,6 @@ $span-color: #A1A1A1;
 }
 
 .subtitle-span {
-  color: $span-color;
+  color: $silver-chalice;
   font-size: 18px;
 }
