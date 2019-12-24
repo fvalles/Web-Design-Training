@@ -3,9 +3,38 @@ $silver-chalice: #A1A1A1;
 $tundora: #474747;
 //$key-lime-pipe: #B0BF1A;
 $viking: #63C8D4;
+$white: #FFFFFF;
+$cornflower-blue: #517EF0;
 
 html {
   height: 100%;
+}
+
+.top-nav {
+  background-color: $white;
+  border-top: 5px solid $cornflower-blue;
+  box-shadow: 1px 1px 7px $tundora;
+  display: block;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.company-logo {
+  height: calc(77px/2);
+  width: calc(606px/2);
+}
+
+.logout {
+  font-size: 16px;;
 }
 
 .centered-body {
@@ -13,6 +42,10 @@ html {
   display: flex;
   justify-content: center;
   min-height: 100%;
+}
+
+.body-top-margin {
+  margin-top: 60px;
 }
 
 .page-content {
@@ -32,7 +65,7 @@ html {
   box-shadow: 1px 1px 7px $tundora;
   display: flex;
   flex-direction: column;
-  margin: 20px 20px 20px 20px;
+  margin: 40px 20px 20px 20px;
 }
 
 .badge {
@@ -55,7 +88,7 @@ html {
 .book-cover-item {
   margin: 20px 20px 5px 20px;
   max-width: 150px;
-  //width: 100%;
+  width: 100%;
 }
 
 .text-style {
