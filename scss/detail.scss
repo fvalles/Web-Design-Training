@@ -33,6 +33,11 @@ $white: #FFFFFF;
   display: flex;
 }
 
+@mixin transition($time) {
+  -webkit-transition: -webkit-transform $time; /* Older browsers */
+  transition: transform $time;
+}
+
 html {
   height: 100%;
 }
@@ -86,8 +91,13 @@ body {
 
 .book-item {
   @extend %flex-column-direction;
+  @include transition(0.5s);
   box-shadow: 1px 1px 7px $tundora;
   margin: 40px 20px 20px 20px;
+}
+
+.book-item:hover {
+  transform: scale(1.1);
 }
 
 .centered-body {
