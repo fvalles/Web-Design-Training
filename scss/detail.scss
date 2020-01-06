@@ -1,13 +1,20 @@
 $absolute-zero: #0048BA;
+$badge-height: 110px;
+$badge-width: 74px;
+$breakpoint: 1024px;
 $cornflower-blue: #517EF0;
 $font: 'Roboto', sans-serif;
 $gray-chateau: #A5A9AC;
 $porcelain: #F1F2F3;
 $silver-chalice: #A1A1A1;
+$title-book-item-size: 17px;
+$title-size: 28px;
+$title-span-size: 20px;
+$subtitle-book-item-size: 13px;
+$subtitle-size: 18px;
 $tundora: #474747;
 $viking: #63C8D4;
 $white: #FFFFFF;
-//$key-lime-pipe: #B0BF1A;
 
 %form-button {
   border-radius: 4px;
@@ -51,13 +58,13 @@ body {
 }
 
 .badge {
-  height: 110px;
+  height: $badge-height;
   left: 200px;
   position: absolute;
   -ms-transform: rotate(15deg); /* IE 9 */
   -webkit-transform: rotate(15deg); /* Safari 3-8 */
   transform: rotate(15deg);
-  width: 74px;
+  width: $badge-width;
   z-index: 1;
 }
 
@@ -93,7 +100,6 @@ body {
 .centered-content {
   @extend %flex-centered-items;
   justify-content: center;
-  /*min-height: 100%;*/
 }
 
 .company-logo {
@@ -102,8 +108,8 @@ body {
 }
 
 .company-logo-login {
-  height: calc(77px/5*2);
-  width: calc(606px/5*2);
+  height: calc(77px / 5 * 2);
+  width: calc(606px / 5 * 2);
   margin-top: 20px;
 }
 
@@ -150,7 +156,7 @@ body {
 }
 
 .logout {
-  font-size: 16px;;
+  font-size: 16px;
 }
 
 .navbar {
@@ -172,21 +178,21 @@ body {
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: $subtitle-size;
   font-weight: bold;
   margin: 5px 0 25px 10px;
 }
 
 .subtitle-book-item {
   color: $silver-chalice;
-  font-size: 13px;
+  font-size: $subtitle-book-item-size;
   font-weight: bold;
   margin: 5px 0 10px 20px;
 }
 
 .subtitle-span {
   color: $silver-chalice;
-  font-size: 18px;
+  font-size: $subtitle-size;
 }
 
 .text-style {
@@ -203,21 +209,21 @@ body {
 
 .title {
   border-bottom: 4px solid $viking;
-  font-size: 28px;
+  font-size: $title-size;
   font-weight: bold;
   margin: 20px 0 35px 10px;
-  padding-bottom: 10px;;
+  padding-bottom: 10px;
 }
 
 .title-book-item {
-  font-size: 17px;
+  font-size: $title-book-item-size;
   font-weight: bold;
   margin: 5px 0 5px 20px;
 }
 
 .title-span {
   color: $silver-chalice;
-  font-size: 20px;
+  font-size: $title-span-size;
   font-weight: bold;
 }
 
@@ -246,4 +252,59 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+
+@media only screen and (max-width: $breakpoint) {  
+  .back-button-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    order: 1;
+  }
+
+  .centered-body {
+    justify-content: center;
+  }
+
+  .badge {
+    height: $badge-height * 0.6;
+    left: 265px;
+    top: 10px;
+    width: $badge-width * 0.6;
+  }
+
+  .book-cover {
+    align-self: center;
+    display: flex;
+    margin: 30px 0 25px 0;
+  }
+
+  .page-content {
+    flex-direction: column;
+    height: 620px;
+    width: 370px;
+  }
+
+  .subtitle {
+    font-size: $subtitle-size * 0.8;
+    margin: 0 0 25px 0;
+  }
+  
+  .subtitle-span {
+    font-size: $subtitle-size * 0.8;
+  }
+
+  .text-style {
+    margin: 0 15px 0 15px;
+  }
+
+  .title {
+    font-size: $title-size * 0.8;
+    margin: 0 0 25px 0;
+  }
+  
+  .title-span {
+    font-size: $title-span-size * 0.8;
+  }
 }
