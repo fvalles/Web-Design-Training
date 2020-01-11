@@ -23,7 +23,7 @@ $white: #FFFFFF;
   border-radius: 4px;
   cursor: pointer;
   height: 34px;
-  width: 100%
+  width: 100%;
 }
 
 %flex-column-direction {
@@ -241,6 +241,8 @@ body {
 }
 
 .top-nav {
+  -webkit-animation: border-animation 15s linear infinite; /* Safari 4.0 - 8.0 */
+  animation: border-animation 15s linear infinite;
   background-color: $white;
   border-top: 5px solid $cornflower-blue;
   box-shadow: 1px 1px 7px $tundora;
@@ -266,6 +268,24 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes border-animation {
+  0%   {border-top: 5px solid $cornflower-blue;}
+  25%  {border-top: 5px solid blue}
+  50%  {border-top: 5px solid green}
+  75%  {border-top: 5px solid yellow}
+  100% {border-top: 5px solid red;}
+}
+
+/* Standard syntax */
+@keyframes border-animation {
+  0%   {border-top: 5px solid $cornflower-blue;}
+  25%  {border-top: 5px solid blue}
+  50%  {border-top: 5px solid green}
+  75%  {border-top: 5px solid yellow}
+  100% {border-top: 5px solid red;}
 }
 
 @media only screen and (max-width: $mobile-flex-breakpoint) {  
