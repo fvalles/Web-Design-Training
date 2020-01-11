@@ -1,17 +1,20 @@
 $absolute-zero: #0048BA;
 $badge-height: 110px;
 $badge-width: 74px;
-$breakpoint: 1024px;
 $cornflower-blue: #517EF0;
 $font: 'Roboto', sans-serif;
 $gray-chateau: #A5A9AC;
+$mobile-flex-breakpoint: 1024px;
 $porcelain: #F1F2F3;
 $silver-chalice: #A1A1A1;
 $title-book-item-size: 17px;
 $title-size: 28px;
 $title-span-size: 20px;
+$title-tablet-size: 30px;
 $subtitle-book-item-size: 13px;
 $subtitle-size: 18px;
+$subtitle-tablet-size: 20px;
+$tablet-grid-breakpoint: 850px;
 $tundora: #474747;
 $viking: #63C8D4;
 $white: #FFFFFF;
@@ -246,6 +249,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;  //Necessary to avoid book items from positioning above the nav bar when hover style is applied
 }
 
 .sign-up-button {
@@ -264,7 +268,7 @@ body {
   width: 100%;
 }
 
-@media only screen and (max-width: $breakpoint) {  
+@media only screen and (max-width: $mobile-flex-breakpoint) {  
   .back-button-container {
     align-items: center;
     display: flex;
@@ -316,5 +320,101 @@ body {
   
   .title-span {
     font-size: $title-span-size * 0.8;
+  }
+}
+
+@supports (display: grid) {
+  @media only screen and (max-width: $tablet-grid-breakpoint) {
+    .author {
+      margin: 100px 0 0 20px;
+    }
+
+    .back-button-container {
+      grid-area: back-button;
+      justify-self: start;
+      width: auto;
+    }
+
+    .badge {
+      grid-area: book-cover;
+      margin-left: 220px;
+      position: static;
+    }
+
+    .book-cover {
+      align-self: center;
+      grid-area: book-cover;
+      justify-self: end;
+      margin: 0;
+    }
+
+    .centered-body {
+      display: grid;
+      grid-template-columns: 60px 1fr 60px;
+      grid-template-rows: 80px 1fr 80px;
+      grid-template-areas: 
+        ". back-button ."
+        ". book-item ."
+        ". . .";
+    }
+
+    .centered-content {
+      grid-area: book-item;
+      height: 480px;
+    }
+
+    .editorial {
+      margin: 160px 0 0 20px;
+    }
+
+    .page-content {
+      display: grid;
+      height: 480px;
+      grid-template-columns: 250px 2fr;
+      grid-template-rows: 1fr 400px;
+      grid-template-areas: 
+        ". book-info"
+        "book-cover book-info";
+      width: 100%;
+    }
+
+    .text-style {
+      display: grid;
+      grid-area: book-info;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 400px;
+      grid-template-areas: 
+        "title"
+        "subtitle"
+        "subtitle";
+    }
+
+    .title {
+      align-self: center;
+      border-bottom: 0;
+      font-size: $title-tablet-size;
+      grid-area: title;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title-span {
+      display: block;
+      font-size: $title-tablet-size * 0.7;
+      margin-left: 60px;
+    }
+
+    .subtitle {
+      grid-area: subtitle;
+      font-size: $subtitle-tablet-size;
+    }
+
+    .subtitle-span {
+      font-size: $subtitle-tablet-size;
+    }
+
+    .year {
+      margin: 220px 0 0 20px;
+    }
   }
 }
