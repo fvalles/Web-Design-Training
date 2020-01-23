@@ -3,11 +3,11 @@ import { isArray } from './utils';
 export function min(param) {
   let arrayVal = Array.isArray(param);
   
-  if (!arrayVal) {
+  if (arrayVal) {
+    return Math.min(...param);
+  } else {
     return param;
-  } 
-
-  return Math.min();
+  }
 }
 
 export function copy() {
