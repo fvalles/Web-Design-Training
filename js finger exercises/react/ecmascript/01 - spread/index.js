@@ -9,8 +9,10 @@ export function min() {
   
   if (args.length > 1) {
     return Math.min(...args);
-  } else {
+  } else if (args.length === 1) {
     return args[0];
+  } else {
+    return undefined;
   }
 }
 
