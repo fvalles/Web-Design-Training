@@ -1,12 +1,16 @@
 import { isArray } from './utils';
 
-export function min(param) {
-  let arrayVal = Array.isArray(param);
+export function min() {
+  let args = [...arguments];
+
+  if (typeof args[0] === 'object') {
+    args = args[0];
+  }
   
-  if (arrayVal) {
-    return Math.min(...param);
+  if (args.length > 1) {
+    return Math.min(...args);
   } else {
-    return param;
+    return args[0];
   }
 }
 
