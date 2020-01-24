@@ -25,3 +25,8 @@ export function copy(args) {
     return copiedObj;
   }
 }
+
+export const reverseMerge = (firstArray, secondArray) => {
+  let revMergedArray = [...secondArray, ...firstArray];
+  return revMergedArray;
+}
