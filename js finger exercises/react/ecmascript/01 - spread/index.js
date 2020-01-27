@@ -16,7 +16,12 @@ export function min() {
   }
 }
 
-export function copy(obj) {
-  let copiedObj = Object.assign({}, obj);
-  return copiedObj;
+export function copy(args) {
+  if (Array.isArray(args)) {
+    let copiedArray = [...args];
+    return copiedArray;
+  } else {
+    let copiedObj = Object.assign({}, args);
+    return copiedObj;
+  }
 }
