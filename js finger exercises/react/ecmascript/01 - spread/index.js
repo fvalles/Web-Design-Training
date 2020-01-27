@@ -16,6 +16,7 @@ export function min() {
   }
 }
 
-export function copy() {
-
+export function copy(obj) {
+  let copiedObj = Object.assign({}, obj);
+  return copiedObj;
 }
