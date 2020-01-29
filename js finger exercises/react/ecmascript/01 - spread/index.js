@@ -1,32 +1,29 @@
-import { isArray } from './utils';
-
-export function min() {
-  let args = [...arguments];
-
+export function min(...args) {
   if (typeof args[0] === 'object') {
-    args = args[0];
-  }
-  
-  if (args.length > 1) {
+    return Math.min(...args[0]);
+  } else if (args.length > 1) {
     return Math.min(...args);
-  } else if (args.length === 1) {
-    return args[0];
-  } else {
-    return undefined;
   }
+
+  return args[0];
 }
 
 export function copy(args) {
   if (Array.isArray(args)) {
-    let copiedArray = [...args];
+    const copiedArray = [...args];
     return copiedArray;
-  } else {
-    let copiedObj = Object.assign({}, args);
-    return copiedObj;
   }
+
+  const copiedObj = { ...args };
+  return copiedObj;
 }
 
 export const reverseMerge = (firstArray, secondArray) => {
-  let revMergedArray = [...secondArray, ...firstArray];
+  const revMergedArray = [...secondArray, ...firstArray];
   return revMergedArray;
-}
+};
+
+export const filterAttribs = (obj) => {
+  const { a, b, ...filteredObj } = obj;
+  return filteredObj;
+};
