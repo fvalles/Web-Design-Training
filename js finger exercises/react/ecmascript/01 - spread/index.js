@@ -1,5 +1,3 @@
-/* import { isArray } from './utils'; */
-
 export function min(...args) {
   if (typeof args[0] === 'object') {
     return Math.min(...args[0]);
@@ -26,14 +24,6 @@ export const reverseMerge = (firstArray, secondArray) => {
 };
 
 export const filterAttribs = (obj) => {
-  const filteredObj = { ...obj };
-  const objKeys = Object.keys(filteredObj);
-
-  objKeys.forEach(key => {
-    if (key === 'a' || key === 'b') {
-      delete filteredObj[key];
-    }
-  });
-
+  const { a, b, ...filteredObj } = obj;
   return filteredObj;
 };
