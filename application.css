@@ -1,0 +1,515 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+input,
+a,
+button,
+select,
+textarea {
+  color: #000;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus,
+p:focus,
+span:focus,
+label:focus,
+input:focus,
+a:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+input,
+select,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+a:focus, a:active, a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.sign-up-button, .login-button {
+  border-radius: 4px;
+  cursor: pointer;
+  height: 34px;
+  width: 100%;
+}
+
+.text-style-book-item, .text-style, .page-content-book-list, .login-window, .login-form, .centered-body, .book-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar, .centered-content {
+  align-items: center;
+  display: flex;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.back-button {
+  align-self: center;
+  display: flex;
+  font-size: 18px;
+  margin-left: 0;
+}
+
+.back-button-container {
+  width: 900px;
+}
+
+.back-button::before {
+  content: url(images/back-arrow.png);
+  margin-right: 15px;
+}
+
+.badge {
+  height: 110px;
+  left: 200px;
+  position: absolute;
+  -ms-transform: rotate(15deg);
+  /* IE 9 */
+  -webkit-transform: rotate(15deg);
+  /* Safari 3-8 */
+  transform: rotate(15deg);
+  width: 74px;
+  z-index: 1;
+}
+
+.body-top-margin {
+  margin-top: 60px;
+}
+
+.book-cover {
+  margin: 20px 40px 20px 20px;
+  max-width: 230px;
+  width: 100%;
+}
+
+.book-cover-item {
+  margin: 20px 20px 5px 20px;
+  max-width: 150px;
+  width: 100%;
+}
+
+.book-item {
+  -webkit-transition: -webkit-transform 0.5s;
+  /* Older browsers */
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 7px #474747;
+  margin: 40px 20px 20px 20px;
+}
+
+.book-item:hover {
+  transform: scale(1.1);
+}
+
+.centered-body {
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100%;
+}
+
+.centered-content {
+  justify-content: center;
+}
+
+.company-logo {
+  height: calc(77px/2);
+  width: calc(606px/2);
+}
+
+.company-logo-login {
+  height: calc(77px / 5 * 2);
+  width: calc(606px / 5 * 2);
+  margin-top: 20px;
+}
+
+.horizontal-rule {
+  border: 1px solid #A5A9AC;
+  margin: 5px 0 5px 0;
+  width: 100%;
+}
+
+.input {
+  border-radius: 4px;
+  margin-top: 10px;
+  height: 34px;
+  width: 100%;
+}
+
+.input-text {
+  font-size: 16px;
+}
+
+.login-button {
+  background-color: #0048BA;
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
+.login-form {
+  align-items: center;
+  justify-content: space-around;
+  height: 280px;
+  width: 260px;
+}
+
+.login-window {
+  align-items: center;
+  background-color: #F1F2F3;
+  border-top: 7px solid #517EF0;
+  height: 400px;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.logout {
+  font-size: 16px;
+}
+
+.navbar {
+  height: 100%;
+  justify-content: space-around;
+}
+
+.page-content {
+  box-shadow: 1px 1px 7px #474747;
+  display: flex;
+  height: 400px;
+  position: relative;
+  width: 900px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0 25px 10px;
+}
+
+.subtitle-book-item {
+  color: #A1A1A1;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 5px 0 10px 20px;
+}
+
+.subtitle-span {
+  color: #A1A1A1;
+  font-size: 18px;
+}
+
+.text-style {
+  flex-grow: 1;
+  font-family: "Roboto", sans-serif;
+  margin-right: 20px;
+}
+
+.text-style-book-item {
+  font-family: "Roboto", sans-serif;
+}
+
+.title {
+  border-bottom: 4px solid #63C8D4;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px 0 35px 10px;
+  padding-bottom: 10px;
+}
+
+.title-book-item {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 5px 0 5px 20px;
+}
+
+.title-span {
+  color: #A1A1A1;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top-nav {
+  -webkit-animation: border-animation 15s linear infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: border-animation 15s linear infinite;
+  background-color: #FFFFFF;
+  border-top: 5px solid #517EF0;
+  box-shadow: 1px 1px 7px #474747;
+  display: block;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.sign-up-button {
+  background-color: #F1F2F3;
+  border-color: #0048BA;
+  border-style: solid;
+  border-width: 2px;
+  color: #0048BA;
+}
+
+.user-info {
+  align-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes border-animation {
+  0% {
+    border-top: 5px solid #517EF0;
+  }
+  25% {
+    border-top: 5px solid blue;
+  }
+  50% {
+    border-top: 5px solid green;
+  }
+  75% {
+    border-top: 5px solid yellow;
+  }
+  100% {
+    border-top: 5px solid red;
+  }
+}
+/* Standard syntax */
+@keyframes border-animation {
+  0% {
+    border-top: 5px solid #517EF0;
+  }
+  25% {
+    border-top: 5px solid blue;
+  }
+  50% {
+    border-top: 5px solid green;
+  }
+  75% {
+    border-top: 5px solid yellow;
+  }
+  100% {
+    border-top: 5px solid red;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .back-button-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    order: 1;
+  }
+
+  .centered-body {
+    justify-content: center;
+  }
+
+  .badge {
+    height: 66px;
+    left: 265px;
+    top: 10px;
+    width: 44.4px;
+  }
+
+  .book-cover {
+    align-self: center;
+    display: flex;
+    margin: 30px 0 25px 0;
+  }
+
+  .page-content {
+    flex-direction: column;
+    height: 620px;
+    width: 370px;
+  }
+
+  .subtitle {
+    font-size: 14.4px;
+    margin: 0 0 25px 0;
+  }
+
+  .subtitle-span {
+    font-size: 14.4px;
+  }
+
+  .text-style {
+    margin: 0 15px 0 15px;
+  }
+
+  .title {
+    font-size: 22.4px;
+    margin: 0 0 25px 0;
+  }
+
+  .title-span {
+    font-size: 16px;
+  }
+}
+@supports (display: grid) {
+  @media only screen and (max-width: 850px) {
+    .author {
+      margin: 100px 0 0 20px;
+    }
+
+    .back-button-container {
+      grid-area: back-button;
+      justify-self: start;
+      width: auto;
+    }
+
+    .badge {
+      grid-area: book-cover;
+      margin-left: 220px;
+      position: static;
+    }
+
+    .book-cover {
+      align-self: center;
+      grid-area: book-cover;
+      justify-self: end;
+      margin: 0;
+    }
+
+    .centered-body {
+      display: grid;
+      grid-template-columns: 60px 1fr 60px;
+      grid-template-rows: 80px 1fr 80px;
+      grid-template-areas: ". back-button ." ". book-item ." ". . .";
+    }
+
+    .centered-content {
+      grid-area: book-item;
+      height: 480px;
+    }
+
+    .editorial {
+      margin: 160px 0 0 20px;
+    }
+
+    .page-content {
+      display: grid;
+      height: 480px;
+      grid-template-columns: 250px 2fr;
+      grid-template-rows: 1fr 400px;
+      grid-template-areas: ". book-info" "book-cover book-info";
+      width: 100%;
+    }
+
+    .text-style {
+      display: grid;
+      grid-area: book-info;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 400px;
+      grid-template-areas: "title" "subtitle" "subtitle";
+    }
+
+    .title {
+      align-self: center;
+      border-bottom: 0;
+      font-size: 30px;
+      grid-area: title;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title-span {
+      display: block;
+      font-size: 21px;
+      margin-left: 60px;
+    }
+
+    .subtitle {
+      grid-area: subtitle;
+      font-size: 20px;
+    }
+
+    .subtitle-span {
+      font-size: 20px;
+    }
+
+    .year {
+      margin: 220px 0 0 20px;
+    }
+  }
+}
+
+/*# sourceMappingURL=application.css.map */
